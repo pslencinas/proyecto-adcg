@@ -1,0 +1,39 @@
+{% extends "index.html" %} 
+
+{% block content %} 
+
+  {% if username %}
+  <div class="row">
+    <div class="col-md-3">
+      <a class="btn btn-primary" href="/catalog/edit/{{movie.id}}" role="button">Edit</a>
+      <a class="btn btn-danger" href="/catalog/delete/{{movie.id}}" role="button">Delete</a>
+    </div>
+  </div>
+  {% endif %}
+  <div class="row">
+    <h1>{{movie.name}}</h1>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-3 show_movie">
+      <img src="{{movie.poster_url}}">
+    </div>
+    <div class="col-md-9">
+      <h3>Overview</h3>
+      <p>{{movie.overview}}</p>
+      <br>
+      <h3>Director</h3>
+      <p>{{movie.director}}</p>
+      <br>
+      <a href="{{movie.youtube_url}}"><i class="fa fa-youtube-play fa-3x" aria-hidden="true"></i></a>
+
+      {% if error %}
+        <h2 class="error-color">{{error}}</h2>
+      {% endif %}
+    </div>
+  </div>  
+
+
+{% endblock %}
+
+
