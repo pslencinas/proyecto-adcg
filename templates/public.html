@@ -6,7 +6,7 @@
     <header class="mdl-cell mdl-cell--12-col">
       <h1>Informe de Bajas</h1>
       
-      <a class="btn btn-primary" href="/bajas/new" role="button">Add</a>
+      <a class="btn btn-primary" href="/bajas/new" role="button">Agregar</a>
       
     </header>
   </div>
@@ -16,30 +16,32 @@
     <thead> 
       <tr> 
         <th>#</th> 
-        <th>First Name</th> 
-        <th>Last Name</th> 
-        <th>Username</th> 
+        <th>Razon Social</th> 
+        <th>Sucursal</th> 
+        <th>Empresa Usuaria</th> 
+        <th>Nombre</th> 
+        <th>Apellido</th>
+        <th>CUIL</th>
+        <th>Fecha de Ingreso</th>
+        <th>Fecha de Egreso</th>
+        <th>Situación</th>  
       </tr> 
     </thead> 
     <tbody> 
-      <tr> 
-        <th scope="row">1</th> 
-        <td>Mark</td> 
-        <td>Otto</td> 
-        <td>@mdo</td> 
-      </tr> 
-      <tr> 
-        <th scope="row">2</th> 
-        <td>Jacob</td> 
-        <td>Thornton</td> 
-        <td>@fat</td> 
-      </tr> 
-      <tr> 
-        <th scope="row">3</th> 
-        <td>Larry</td> 
-        <td>the Bird</td> 
-        <td>@twitter</td> 
-      </tr> 
+      {% for baja in listbajas %}
+        <tr> 
+          <th scope="row"><a href="/bajas/view/{{baja.id}}">{{baja.id}}</a></th> 
+          <td>{{baja.razonSocial}}</td> 
+          <td>{{baja.sucursal}}</td> 
+          <td>{{baja.usuaria}}</td> 
+          <td>{{baja.nombre}}</td> 
+          <td>{{baja.apellido}}</td> 
+          <td>{{baja.cuit}}</td> 
+          <td>{{baja.fechaIngreso}}</td> 
+          <td>{{baja.fechaEgreso}}</td> 
+          <td>{{baja.situacion}}</td> 
+        </tr> 
+      {% endfor %}
     </tbody> 
   </table>
 

@@ -1,4 +1,4 @@
-from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
@@ -17,12 +17,19 @@ class Bajas(Base):
     __tablename__ = 'bajas'
 
     id = Column(Integer, primary_key = True)
-    razon_social = Column(String(10))
+    razonSocial = Column(String(10))
+    sucursal = Column(String(100))
     usuaria = Column(String(100))
     nombre = Column(String(100))
     apellido = Column(String(100))
     cuit = Column(String(20))
-    mejor_remu = Column(String(20))
+    fechaIngreso = Column(Date)
+    fechaEgreso = Column(Date)
+    fechaBaja = Column(Date)
+    mejorRemu = Column(String(20))
+    situacion = Column(String(50))
+    suspensionDesde = Column(Date)
+    suspensionHasta = Column(Date)
     comentarios = Column(String(500))
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)

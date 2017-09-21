@@ -1,0 +1,7 @@
+.checkboxes{
+	padding-top: 5px;
+}
+
+input[value="no"]{
+	margin-left: 15px;
+}

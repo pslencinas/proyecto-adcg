@@ -16,6 +16,7 @@
     <!-- Custom Fonts -->
     <link href="{{ url_for('static', filename='font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
     <!-- Include Date Range Picker -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
@@ -63,7 +64,7 @@
                   <li>  <!-- Tab Servicios -->
                     <a><i class="fa fa-table"></i>Acciones<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu nav-general">
-                      <li><a href="/acciones/baja">Bajas</a></li>
+                      <li><a href="/">Bajas</a></li>
                       
                     </ul>
                   </li>
@@ -110,7 +111,7 @@
       <div class="right_col" role="main">
         <div class="row">
           <!-- #page-wrapper -->
-          <div class="col-md-9 col-sm-9 col-xs-9">
+          <div class="col-md-12 col-sm-12 col-xs-12">
             
             {% block content %} 
 
