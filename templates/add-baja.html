@@ -1,6 +1,7 @@
 {% extends "index.html" %}
 
 {% block content %}
+<div class="col-md-9 col-sm-9 col-xs-9">
   <div class="row">
     <div class="col-md-9 col-md-offset-4">
       <h2>Agregar Nueva Baja</h2>
@@ -9,7 +10,6 @@
   <br>
   <form class="form-horizontal" action="/bajas/new/" method = "POST">
     <div class="row">
-  
       <!-- INICIO col-md-9 -->
       <div class="col-md-9 col-md-offset-1">
         <div class="form-group">
@@ -125,5 +125,5 @@
   </form>
   
 
-
+</div>
 {% endblock %}
