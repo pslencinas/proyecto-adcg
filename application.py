@@ -203,7 +203,7 @@ def showBaja(id):
 @app.route('/', methods=['GET'])
 @app.route('/public/', methods=['GET'])
 def showMain():
-    listbajas = session.query(Bajas).order_by(Bajas.razonSocial.desc())
+    listbajas = session.query(Bajas).order_by(Bajas.fechaEgreso.desc())
     
     return render_template('public.html', listbajas = listbajas)
 
